@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center w-full h-20 bg-background">
+      <nav className="flex items-center w-full h-20 bg-background z-99">
         <div className="absolute -top-4 -left-4 bg-white p-6 rounded-full z-50">
           <motion.button
             className="flex flex-col gap-1 cursor-pointer w-8 h-8 items-center justify-center"
