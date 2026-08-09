@@ -69,10 +69,10 @@ export default function Home() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: i * 0.2, duration: 0.5, ease: "easeOut" }}
-                            className="bg-background text-white w-28 h-28 rounded-full flex flex-col items-center justify-center"
+                            className="bg-background text-white w-28 h-26 rounded-full flex flex-col items-center justify-center"
                         >
                             <h2 className="text-xl font-bold">{item.value}</h2>
-                            <p className="text-md">{item.label}</p>
+                            <p className="text-xs">{item.label}</p>
                         </motion.div>
                     ))}
                 </div>
