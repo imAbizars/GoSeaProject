@@ -82,7 +82,7 @@ export default function Home() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1, delay: 0.2 }}
-                    className="text-center text-lg text-text-h max-w-2xl mx-auto px-6 mt-4 font-medium"
+                    className="text-center text-md text-text-h max-w-2xl mx-auto px-6 mt-4 font-medium"
                 >
                     For over 8 years, we've been dedicated to protecting our oceans through meaningful action and continuous education. 
                     This journey has led us to run more than 15 conservation programs, engaging thousands of volunteers 
