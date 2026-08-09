@@ -3,7 +3,8 @@
 :root {
   --text: #ffffff;
   --text-h: #08060d;
-  --background: #093C5D;
+  --background: rgb(9, 60, 93);
+  --primary-button: #06283f;
   --border: #000000;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
@@ -23,13 +24,19 @@
   --color-text-h: var(--text-h);
   --color-background: var(--background);
   --color-border: var(--border);
+  --color-primary-button : var(--primary-button);
 }
 
 body {
   margin: 0;
   background: transparent;
 }
-
+.wave-container {
+  bottom:100px;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
 #root {
   box-sizing: border-box;
 }
