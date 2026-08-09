@@ -65,14 +65,14 @@ export default function Home() {
                     {aboutItems.map((item, i) => (
                         <motion.div
                             key={item.label}
-                            initial={{ opacity: 0, y: 40 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 40 }}
-                            transition={{ delay: i * 0.1 + 0.3, duration: 0.4 }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: i * 0.2, duration: 0.5, ease: "easeOut" }}
                             className="bg-background text-white w-28 h-28 rounded-full flex flex-col items-center justify-center"
                         >
                             <h2 className="text-xl font-bold">{item.value}</h2>
-                            <p>{item.label}</p>
+                            <p className="text-md">{item.label}</p>
                         </motion.div>
                     ))}
                 </div>
