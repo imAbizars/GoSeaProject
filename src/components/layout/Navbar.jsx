@@ -7,7 +7,12 @@ export default function Navbar() {
 
   const toggleNav = () => setIsOpen(!isOpen);
 
-  const navLinks = ["Home", "About", "Projects", "Contact"];
+  const navLinks = [
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Projects", href: "#projects" },
+    { label: "Contact", href: "#contact" },
+];
 
   const topBar = {
     closed: { translateY: 0, rotate: 0 },
@@ -24,7 +29,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="absolute top-0 left-0 flex items-center w-full h-20 z-50">
+      <nav className="fixed top-0 left-0 flex items-center w-full h-20 z-50">
         <div className="absolute -top-4 -left-4 bg-white p-6 rounded-full z-50">
           <motion.button
             className="flex flex-col gap-1 cursor-pointer w-8 h-8 items-center justify-center"
@@ -63,17 +68,18 @@ export default function Navbar() {
           >
             <nav className="flex flex-col items-center gap-8">
               {navLinks.map((link, i) => (
-                <motion.a
-                  key={link}
-                  href="#"
-                  initial={{ opacity: 0, y: 40 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: 40 }}
-                  transition={{ delay: i * 0.1 + 0.3, duration: 0.4 }}
-                  className="text-background text-3xl font-bold tracking-tight hover:text-accent transition-colors"
-                >
-                  {link}
-                </motion.a>
+                  <motion.a
+                      key={link.label}
+                      href={link.href}
+                      onClick={() => setIsOpen(false)}
+                      initial={{ opacity: 0, y: 40 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: 40 }}
+                      transition={{ delay: i * 0.1 + 0.3, duration: 0.4 }}
+                      className="text-background text-3xl font-bold tracking-tight hover:text-accent transition-colors"
+                  >
+                      {link.label}
+                  </motion.a>
               ))}
             </nav>
           </motion.div>
