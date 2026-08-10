@@ -3,6 +3,7 @@ import * as motion from "motion/react-client";
 import StatCircle from "../ui/StatCircle";
 import useWordReveal from "../../hooks/useWordReveal";
 import { aboutItems, statementText } from "../../data/aboutData";
+import Wave from "../ui/Wave";
 
 export default function AboutSection() {
     const statementRef = useRef(null);
@@ -17,18 +18,18 @@ export default function AboutSection() {
             id="about"
             className="flex flex-col min-h-screen overflow-hidden z-31"
         >
-            <div className="space-y-10 p-4">
+            <div className="space-y-10 p-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className="text-center text-4xl font-bold text-background"
+                    className=" text-5xl font-bold text-background"
                 >
                     About Our Journey
                 </motion.h2>
 
-                <div className="flex justify-center gap-4">
+                <div className="flex justify-center space-x-2 ">
                     {aboutItems.map((item, i) => (
                         <StatCircle
                             key={item.label}
@@ -57,6 +58,9 @@ export default function AboutSection() {
                     </p>
                 </div>
             </div>
+            <Wave
+            fill="var(--background)"
+            className="relative top-0 left-0 w-full z-20" />
         </section>
     );
 }

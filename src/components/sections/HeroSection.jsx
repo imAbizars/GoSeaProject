@@ -26,8 +26,8 @@ export default function HeroSection() {
             <div className="absolute inset-0 bg-black/40 z-10" />
             <div className="flex flex-col gap-6 p-8 z-20">
                 <motion.h1
-                    initial={{ opacity: 0, x: -70 }}
-                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, y: -70 }}
+                    whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                     className="w-65 text-6xl tracking-tight text-white font-bold"
@@ -45,7 +45,10 @@ export default function HeroSection() {
                     Join With Us
                 </motion.button>
             </div>
-            <Wave className="absolute top-140 left-0 w-full z-20" />
+            <Wave
+            className="absolute top-140 left-0 w-full z-20"
+            fill="#ffff"
+            />
         </section>
     );
 }
