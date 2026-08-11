@@ -2,9 +2,9 @@ import { useEffect, useRef } from "react";
 import { gsap } from "../../lib/gsap";
 import useScrollReveal from "../../hooks/useScrollReveal";
 import ProgramSlider from "../ui/ProgramSlider";
-import program1 from "../../assets/programassets/tanambakau.jpg";
-import program2 from "../../assets/programassets/bersihlaut.jpg";
-import program3 from "../../assets/programassets/bersih2laut.jpg";
+import program1 from "../../assets/programassets/program1.jpeg";
+import program2 from "../../assets/programassets/program2.jpeg";
+import program3 from "../../assets/programassets/program3.jpeg";
 
 const programImages = [program1, program2, program3];
 
@@ -22,7 +22,7 @@ export default function ProgramSection() {
                     Over the past ten years, we have implemented several programs aimed at promoting the conservation of our marine environment. With the support of passionate marine conservation volunteers, we have continued to work together to develop and expand these programs.
                 </p>
             </div>
-
+            
             <ProgramSlider
             images={programImages} 
             interval={4000} />

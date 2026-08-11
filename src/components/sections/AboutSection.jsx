@@ -44,7 +44,7 @@ export default function AboutSection() {
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-center text-center">
                     <p
                         ref={textRef}
-                        className="font-sans font-medium text-[25px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
+                        className="font-sans font-medium text-[20px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
                     >
                         {wordsArray.map((word, idx) => (
                             <span
