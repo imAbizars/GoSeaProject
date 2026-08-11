@@ -6,4 +6,4 @@ export const aboutItems = [
 ];
 
 export const statementText =
-    "For over 8 years, we've been dedicated to protecting our oceans through meaningful action and continuous education. This journey has led us to run more than 15 conservation programs, engaging thousands of volunteers and creating lasting change for marine ecosystems around the world.";
+    "For over 10 years, we've been dedicated to protecting our oceans through meaningful action and continuous education. This journey has led us to run more than 15 conservation programs, engaging thousands of volunteers and creating lasting change for marine ecosystems around the world.";
