@@ -11,7 +11,7 @@ const programImages = [program1, program2, program3];
 export default function ProgramSection() {
     const h2Ref = useScrollReveal({ direction: "left", start: "top 60%", end: "bottom top" });
     const pRef = useScrollReveal({ direction: "up", start: "top 60%", end: "bottom top" });
-
+    
     return (
         <section className="min-h-screen bg-background">
             <div className="p-6 space-y-10">
@@ -23,7 +23,9 @@ export default function ProgramSection() {
                 </p>
             </div>
 
-            <ProgramSlider images={programImages} interval={4000} />
+            <ProgramSlider
+            images={programImages} 
+            interval={4000} />
         </section>
     );
 }

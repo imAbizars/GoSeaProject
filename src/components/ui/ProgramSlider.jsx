@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence } from "motion/react";
 import * as motion from "motion/react-client";
 
-export default function ImageSlider({ images, interval = 4000 }) {
+export default function ProgramSlider({ images, interval = 400,}) {
     const [index, setIndex] = useState(0);
 
     const goToNext = useCallback(() => {
@@ -19,7 +19,12 @@ export default function ImageSlider({ images, interval = 4000 }) {
     }, [goToNext, interval]);
 
     return (
-        <>
+        <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
+        >
             <div className="relative h-60 m-4 rounded-2xl overflow-hidden ">
                 <AnimatePresence mode="wait">
                     <motion.img
@@ -48,6 +53,6 @@ export default function ImageSlider({ images, interval = 4000 }) {
                     />
                 ))}
             </div>
-        </>
+        </motion.div>
     );
 }
