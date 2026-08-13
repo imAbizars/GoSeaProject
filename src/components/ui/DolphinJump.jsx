@@ -30,11 +30,11 @@ export default function DolphinJump({ src, className = "" }) {
                 x: 120,
                 rotate: 20,
                 opacity: 1,
-                duration: 0.8,
+                duration: 0.9,
                 ease: "power2.in", // gerak naik cepat lalu melambat, khas lompatan
             }).to(el, {
-                y: 40,
-                x: 0,
+                y: 10,
+                x: 90,
                 rotate: -90,
                 opacity: 0,
                 duration: 0.8,
