@@ -4,6 +4,8 @@ import StatCircle from "../ui/StatCircle";
 import useWordReveal from "../../hooks/useWordReveal";
 import { aboutItems, statementText } from "../../data/aboutData";
 import Wave from "../ui/Wave";
+import DolphinJump from "../ui/DolphinJump";
+import dolpin from "../../assets/dolpinChar.png"
 
 export default function AboutSection() {
     const statementRef = useRef(null);
@@ -24,7 +26,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className=" text-5xl font-bold text-background"
+                    className=" text-5xl font-bold text-background px-2"
                 >
                     About Our Journey
                 </motion.h2>
@@ -58,9 +60,16 @@ export default function AboutSection() {
                     </p>
                 </div>
             </div>
-            <Wave
-            fill="var(--background)"
-            className="relative top-0 left-0 w-full z-20" />
+            <div className="relative w-full ">
+                <Wave
+                    fill="var(--background)"
+                    className="w-full z-21"
+                />
+                <DolphinJump
+                    src={dolpin}
+                    className="absolute bottom-16 left-1/3 w-28 z-20 pointer-events-none"
+                />
+            </div>
         </section>
     );
 }

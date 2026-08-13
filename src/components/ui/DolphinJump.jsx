@@ -12,33 +12,34 @@ export default function DolphinJump({ src, className = "" }) {
             const tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: el,
-                    start: "top 85%",
+                    start: "top 90%",
                     toggleActions: "play none none reverse",
                 },
             });
 
             // posisi awal: di bawah (tersembunyi di balik wave), miring ke bawah
             gsap.set(el, {
-                y: 100,
-                x: -40,
-                rotate: -15,
+                y: 60,
+                x: 150,
+                rotate: 90,
                 opacity: 0,
             });
 
             tl.to(el, {
-                y: -140,
-                x: 20,
+                y: -70,
+                x: 120,
                 rotate: 20,
                 opacity: 1,
-                duration: 0.6,
-                ease: "power2.out", // gerak naik cepat lalu melambat, khas lompatan
+                duration: 0.8,
+                ease: "power2.in", // gerak naik cepat lalu melambat, khas lompatan
             }).to(el, {
-                y: 0,
+                y: 40,
                 x: 0,
-                rotate: -10,
-                duration: 0.5,
-                ease: "power2.in", // jatuh kembali makin cepat (efek gravitasi)
-            });
+                rotate: -90,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.in",
+            })
         }, ref);
 
         return () => ctx.revert();
