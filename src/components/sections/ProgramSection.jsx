@@ -1,7 +1,9 @@
 // ProgramSection.jsx
 import { useRef } from "react";
+import * as motion from "motion/react-client";
 import { StackedCarousel, ResponsiveContainer } from "react-stacked-center-carousel";
 import useScrollReveal from "../../hooks/useScrollReveal";
+import Wave from "../ui/Wave";
 import program1 from "../../assets/programassets/program1.png";
 import program2 from "../../assets/programassets/program2.png";
 import program3 from "../../assets/programassets/program3.png";
@@ -45,13 +47,13 @@ const ProgramCard = ({ data, dataIndex }) => {
 
 export default function ProgramSection() {
   const h2Ref = useScrollReveal({ direction: "up", start: "top 50%", end: "+=800" });
-  const pRef = useScrollReveal({ direction: "down", start: "top 60%", end: "bottom top" });
+  const pRef = useScrollReveal({ direction: "down", start: "top 65%", end: "bottom top" });
   const carouselRef = useRef(null);
 
   return (
     <section className="min-h-screen bg-background overflow-hidden">
-      <div className="space-y-10 p-6">
-        <h2 ref={h2Ref} className="font-heading text-4xl font-bold text-white text-center">
+      <div className="space-y-8 p-6">
+        <h2 ref={h2Ref} className="font-heading text-4xl font-bold text-white text-center ">
           Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
         </h2>
         <p ref={pRef} className=" font-body text-white text-md text-center">
@@ -62,7 +64,12 @@ export default function ProgramSection() {
         </p>
       </div>
 
-      <div className="relative justify-center max-w-xl mx-auto">
+      <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1 }}
+      className="relative  max-w-xl mx-auto">
         <ResponsiveContainer
           carouselRef={carouselRef}
           render={(width, carouselRef) => (
@@ -78,20 +85,11 @@ export default function ProgramSection() {
             />
           )}
         />
-
-        {/* <button
-          onClick={() => carouselRef.current?.goBack()}
-          className="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-2 rounded-full bg-white text-background font-semibold z-10"
-        >
-          ‹
-        </button>
-        <button
-          onClick={() => carouselRef.current?.goNext()}
-          className="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-2 rounded-full bg-white text-background font-semibold z-10"
-        >
-          ›
-        </button>*/}
-      </div>
+      </motion.div>
+        <Wave
+        className="w-full z-20"
+        fill="#ffff"
+        />
     </section>
   );
 }

@@ -29,8 +29,8 @@ export default function HeroSection() {
                     initial={{ opacity: 0, y: -70 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                    className="w-65 text-6xl tracking-tight text-white font-heading font-bold"
+                    transition={{ duration: 0.8 }}
+                    className="w-65 text-5xl tracking-tight text-white font-heading font-bold"
                 >
                     Make The Sea Great Again,
                     <span className="block mt-4">With Us!</span>
@@ -39,7 +39,7 @@ export default function HeroSection() {
                     initial={{ opacity: 0, scale: 0 }}
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.9 }}
+                    transition={{ duration: 0.8 }}
                     className="bg-primary-button max-w-40 p-2 rounded-md font-body font-bold text-xl text-white cursor-pointer hover:bg-background"
                 >
                     Join With Us

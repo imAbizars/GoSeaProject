@@ -31,7 +31,7 @@ export default function AboutSection() {
                     About Our Journey
                 </motion.h2>
 
-                <div className="flex justify-center space-x-2 ">
+                <div className="flex justify-center space-x-2  ">
                     {aboutItems.map((item, i) => (
                         <StatCircle
                             key={item.label}
@@ -67,7 +67,7 @@ export default function AboutSection() {
                 />
                 <DolphinJump
                     src={dolpin}
-                    className="absolute bottom-16 left-1/3 w-28 z-20 pointer-events-none"
+                    className="absolute bottom-16 left-1/3 w-30 z-20 pointer-events-none"
                 />
             </div>
         </section>
