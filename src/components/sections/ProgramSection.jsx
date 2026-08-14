@@ -44,7 +44,7 @@ const ProgramCard = ({ data, dataIndex }) => {
 };
 
 export default function ProgramSection() {
-  const h2Ref = useScrollReveal({ direction: "up", start: "top 60%", end: "bottom top" });
+  const h2Ref = useScrollReveal({ direction: "up", start: "top 50%", end: "+=800" });
   const pRef = useScrollReveal({ direction: "down", start: "top 60%", end: "bottom top" });
   const carouselRef = useRef(null);
 
