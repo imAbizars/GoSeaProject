@@ -1,13 +1,12 @@
 // ProgramSection.jsx
+import { useRef } from "react";
+import { StackedCarousel, ResponsiveContainer } from "react-stacked-center-carousel";
 import useScrollReveal from "../../hooks/useScrollReveal";
-import ProgramMarquee from "../ui/ProgramMarquee";
 import program1 from "../../assets/programassets/program1.png";
 import program2 from "../../assets/programassets/program2.png";
 import program3 from "../../assets/programassets/program3.png";
 import program4 from "../../assets/programassets/diving.jpg";
 
-
-// need refactoring to data
 const programs = [
   {
     image: program1,
@@ -31,15 +30,29 @@ const programs = [
   },
 ];
 
+const ProgramCard = ({ data, dataIndex }) => {
+  const { image, title, desc } = data[dataIndex];
+  return (
+    <div className="h-85  rounded-2xl overflow-hidden shadow-xl bg-white select-none">
+      <img src={image} alt={title} className="w-full h-56 object-cover" draggable={false} />
+      <div className="p-4">
+        <h3 className="text-lg font-bold text-background">{title}</h3>
+        <p className="text-sm text-gray-600 mt-1">{desc}</p>
+      </div>
+    </div>
+  );
+};
+
 export default function ProgramSection() {
   const h2Ref = useScrollReveal({ direction: "left", start: "top 60%", end: "bottom top" });
   const pRef = useScrollReveal({ direction: "up", start: "top 60%", end: "bottom top" });
+  const carouselRef = useRef(null);
 
   return (
     <section className="min-h-screen bg-background overflow-hidden">
       <div className="space-y-10 p-6">
         <h2 ref={h2Ref} className="text-5xl font-bold text-white">
-          Our <span className="bg-white text-background rounded-3xl px-2 ">Program</span>
+          Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
         </h2>
         <p ref={pRef} className="text-white text-justify text-md">
           Over the past ten years, we have implemented several programs aimed at
@@ -49,7 +62,36 @@ export default function ProgramSection() {
         </p>
       </div>
 
-      <ProgramMarquee programs={programs} interval={3000}  />
+      <div className="relative justify-center max-w-xl mx-auto">
+        <ResponsiveContainer
+          carouselRef={carouselRef}
+          render={(width, carouselRef) => (
+            <StackedCarousel
+              ref={carouselRef}
+              slideComponent={ProgramCard}
+              slideWidth={300}
+              carouselWidth={width}
+              data={programs}
+              currentVisibleSlide={3}
+              maxVisibleSlide={3}
+              useGrabCursor
+            />
+          )}
+        />
+
+        {/* <button
+          onClick={() => carouselRef.current?.goBack()}
+          className="absolute left-0 top-1/2 -translate-y-1/2 px-2 py-2 rounded-full bg-white text-background font-semibold z-10"
+        >
+          ‹
+        </button>
+        <button
+          onClick={() => carouselRef.current?.goNext()}
+          className="absolute right-0 top-1/2 -translate-y-1/2 px-2 py-2 rounded-full bg-white text-background font-semibold z-10"
+        >
+          ›
+        </button>*/}
+      </div>
     </section>
   );
 }
