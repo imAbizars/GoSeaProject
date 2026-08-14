@@ -26,7 +26,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className=" text-5xl font-bold text-background px-2"
+                    className=" text-5xl font-heading font-bold text-background px-2"
                 >
                     About Our Journey
                 </motion.h2>
@@ -46,7 +46,7 @@ export default function AboutSection() {
                 <div className="max-w-7xl mx-auto px-6 md:px-12 flex  text-justify">
                     <p
                         ref={textRef}
-                        className="font-sans font-medium text-[23px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
+                        className="font-body font-bold text-[23px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
                     >
                         {wordsArray.map((word, idx) => (
                             <span
