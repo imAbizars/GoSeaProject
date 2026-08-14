@@ -54,7 +54,7 @@ export default function ProgramSection() {
         <h2 ref={h2Ref} className="text-5xl font-bold text-white">
           Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
         </h2>
-        <p ref={pRef} className="text-white text-justify text-md">
+        <p ref={pRef} className="text-white text-justify text-md px-2">
           Over the past ten years, we have implemented several programs aimed at
           promoting the conservation of our marine environment. With the support
           of passionate marine conservation volunteers, we have continued to work
@@ -69,7 +69,7 @@ export default function ProgramSection() {
             <StackedCarousel
               ref={carouselRef}
               slideComponent={ProgramCard}
-              slideWidth={300}
+              slideWidth={270}
               carouselWidth={width}
               data={programs}
               currentVisibleSlide={3}
