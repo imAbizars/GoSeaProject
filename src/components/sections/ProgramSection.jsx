@@ -51,7 +51,7 @@ export default function ProgramSection() {
   return (
     <section className="min-h-screen bg-background overflow-hidden">
       <div className="space-y-10 p-6">
-        <h2 ref={h2Ref} className="text-5xl font-bold text-white">
+        <h2 ref={h2Ref} className="font-heading text-5xl font-bold text-white">
           Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
         </h2>
         <p ref={pRef} className="text-white text-justify text-md px-2">
