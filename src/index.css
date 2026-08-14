@@ -13,6 +13,13 @@
     font-style: normal;
     font-display: swap;
 }
+@font-face{
+    font-family: Poppins;
+    src: url("./assets/fonts/Poppins-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
 
 :root {
   --text: #ffffff;
@@ -39,7 +46,7 @@
   --color-background: var(--background);
   --color-border: var(--border);
   --color-primary-button : var(--primary-button);
-  --font-heading: 'Sora', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   
 }

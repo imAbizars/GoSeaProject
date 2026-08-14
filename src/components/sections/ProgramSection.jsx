@@ -44,17 +44,17 @@ const ProgramCard = ({ data, dataIndex }) => {
 };
 
 export default function ProgramSection() {
-  const h2Ref = useScrollReveal({ direction: "left", start: "top 60%", end: "bottom top" });
+  const h2Ref = useScrollReveal({ direction: "down", start: "top 60%", end: "bottom top" });
   const pRef = useScrollReveal({ direction: "up", start: "top 60%", end: "bottom top" });
   const carouselRef = useRef(null);
 
   return (
     <section className="min-h-screen bg-background overflow-hidden">
       <div className="space-y-10 p-6">
-        <h2 ref={h2Ref} className="font-heading text-5xl font-bold text-white">
+        <h2 ref={h2Ref} className="font-heading text-4xl font-bold text-white text-center">
           Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
         </h2>
-        <p ref={pRef} className="text-white text-justify text-md px-2">
+        <p ref={pRef} className=" font-body text-white text-md text-center">
           Over the past ten years, we have implemented several programs aimed at
           promoting the conservation of our marine environment. With the support
           of passionate marine conservation volunteers, we have continued to work
