@@ -63,7 +63,7 @@ export default function AboutSection() {
             <div className="relative w-full ">
                 <Wave
                     fill="var(--background)"
-                    className="w-full z-21"
+                    className="w-full z-21 border border-black"
                 />
                 <DolphinJump
                     src={dolpin}

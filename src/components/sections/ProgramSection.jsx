@@ -51,7 +51,7 @@ export default function ProgramSection() {
   const carouselRef = useRef(null);
 
   return (
-    <section className="min-h-screen bg-background overflow-hidden">
+    <section className="relative min-h-screen bg-background overflow-hidden">
       <div className="space-y-8 p-6">
         <h2 ref={h2Ref} className="font-heading text-4xl font-bold text-white text-center ">
           Our <span className="bg-white text-background rounded-3xl px-2">Program</span>
@@ -89,6 +89,10 @@ export default function ProgramSection() {
         <Wave
         className="w-full z-20"
         fill="#ffff"
+        />
+        <Wave
+        className="absolute w-full z-20 "
+        fill="var(--semi-background)"
         />
     </section>
   );

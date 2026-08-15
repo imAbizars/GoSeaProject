@@ -25,6 +25,7 @@
   --text: #ffffff;
   --text-h: #08060d;
   --background: rgb(9, 60, 93);
+  --semi-background:#092a40;
   --primary-button: #06283f;
   --border: #000000;
   --shadow:
@@ -44,6 +45,7 @@
   --color-text: var(--text);
   --color-text-h: var(--text-h);
   --color-background: var(--background);
+  --color-semi-backgroud: var(--semi-background)
   --color-border: var(--border);
   --color-primary-button : var(--primary-button);
   --font-heading: 'Poppins', sans-serif;
@@ -59,8 +61,11 @@ body {
 }
 .wave-container {
   width: 100%;
-  height: 200px;
+  /* Tinggi diubah menjadi 117px karena kita telah memotong 83px ruang kosong di bagian atas */
+  height: 117px; 
   overflow: hidden;
+  /* (Opsional) Memastikan kontainer tidak memiliki margin/padding tidak terduga */
+  line-height: 0;
 }
 #root {
   box-sizing: border-box;
