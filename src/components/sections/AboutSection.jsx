@@ -21,7 +21,7 @@ export default function AboutSection() {
             id="about"
             className="flex flex-col min-h-screen overflow-hidden z-31"
         >
-            <div className="space-y-10 p-6">
+            <div className="space-y-8 p-6">
                 <motion.h2
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -47,10 +47,10 @@ export default function AboutSection() {
                     ))}
                 </div>
 
-                <div className="max-w-7xl mx-auto mb-35 px-4 md:px-12 flex ">
+                <div className="max-w-7xl h-80 mx-auto  p-4 md:px-12 flex ">
                     <p
                         ref={textRef}
-                        className="font-body font-medium text-[23px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
+                        className="font-body font-medium text-[20px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
                     >
                         {wordsArray.map((word, idx) => (
                             <span
@@ -64,11 +64,11 @@ export default function AboutSection() {
                     </p>
                 </div>
             </div>
-            <div className="relative w-full ">
                 <Wave
                     fill="var(--background)"
-                    className="absolute bottom-0 w-full h-20! z-21"
+                    className="bottom-0 w-full h-20! z-21"
                 />
+            <div className="relative w-full ">
                 <DolphinJump
                     src={dolpin}
                     className="absolute bottom-0 left-1/3 w-30 z-20 pointer-events-none"
