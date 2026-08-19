@@ -2,7 +2,6 @@ import { useRef } from "react";
 import * as motion from "motion/react-client";
 import { useScroll, useTransform } from "motion/react";
 import HeroImage from "../../assets/heroImage.jpg";
-import CutoutBadge from "../ui/CoutoutBadge";
 import Wave from "../ui/Wave";
 
 export default function HeroSection() {
@@ -12,11 +11,6 @@ export default function HeroSection() {
         offset: ["start start", "end start"],
     });
     const scale = useTransform(scrollYProgress, [0, 1], [1, 1.7]);
-    const items = [
-        { label: "Cheerfull" },
-        { label: "Carefull" },
-        { label:"Cihuy" }
-    ]
     return (
         <section
         id="home"
@@ -40,11 +34,6 @@ export default function HeroSection() {
                   Make The Sea Great Again,
                   <span className="block mt-4">With Us!</span>
               </motion.h1>
-              <div className="flex space-x-4 z-20">
-                {items.map((item) => (
-                  <CutoutBadge key={item.label} text={item.label} fontSize={32} rounded={10} />
-                ))}
-              </div>
               <motion.button
                   initial={{ opacity: 0, scale: 0 }}
                   whileInView={{ opacity: 1, scale: 1 }}

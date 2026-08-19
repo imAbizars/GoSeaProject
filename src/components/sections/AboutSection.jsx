@@ -6,6 +6,7 @@ import { aboutItems, statementText } from "../../data/aboutData";
 import Wave from "../ui/Wave";
 import DolphinJump from "../ui/DolphinJump";
 import dolpin from "../../assets/dolpinChar.png"
+import groupPhoto from "../../assets/potogroup.jpg"
 
 export default function AboutSection() {
     const statementRef = useRef(null);
@@ -26,11 +27,14 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
-                    className=" text-5xl font-heading font-bold text-background px-2"
-                >
+                    className=" text-4xl font-heading font-bold text-background px-2">
+                
                     About Our Journey
                 </motion.h2>
-
+                <img
+                  src={groupPhoto}
+                  alt="potogroup"
+                  className="rounded-md object-cover w-full h-full" />
                 <div className="flex justify-center space-x-2  ">
                     {aboutItems.map((item, i) => (
                         <StatCircle
@@ -43,7 +47,7 @@ export default function AboutSection() {
                     ))}
                 </div>
 
-                <div className="max-w-7xl mx-auto px-6 md:px-12 flex  text-justify">
+                <div className="max-w-7xl mx-auto mb-35 px-4 md:px-12 flex ">
                     <p
                         ref={textRef}
                         className="font-body font-medium text-[23px] sm:text-[40px] md:text-[52px] lg:text-[60px] leading-[1.2] tracking-tight text-black max-w-5xl select-none"
@@ -63,11 +67,11 @@ export default function AboutSection() {
             <div className="relative w-full ">
                 <Wave
                     fill="var(--background)"
-                    className="w-full z-21 border border-black"
+                    className="absolute bottom-0 w-full h-20! z-21"
                 />
                 <DolphinJump
                     src={dolpin}
-                    className="absolute bottom-16 left-1/3 w-30 z-20 pointer-events-none"
+                    className="absolute bottom-0 left-1/3 w-30 z-20 pointer-events-none"
                 />
             </div>
         </section>

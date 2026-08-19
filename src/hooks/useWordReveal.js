@@ -19,8 +19,8 @@ export default function useWordReveal(triggerRef, textRef) {
                     ease: "power1.out",
                     scrollTrigger: {
                         trigger: triggerRef.current,
-                        start: "top 80%",
-                        end: "bottom 60%",
+                        start: "top 60%",
+                        end: "bottom 40%",
                         scrub: 0.8,
                     },
                 }

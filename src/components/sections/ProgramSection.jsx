@@ -35,8 +35,8 @@ const programs = [
 const ProgramCard = ({ data, dataIndex }) => {
   const { image, title, desc } = data[dataIndex];
   return (
-    <div className="h-85  rounded-2xl overflow-hidden shadow-xl bg-white select-none">
-      <img src={image} alt={title} className="w-full h-56 object-cover" draggable={false} />
+    <div className="h-75  rounded-2xl overflow-hidden shadow-xl bg-white select-none">
+      <img src={image} alt={title} className="w-full h-35 object-cover" draggable={false} />
       <div className="p-4">
         <h3 className="text-lg font-bold text-background">{title}</h3>
         <p className="text-sm text-gray-600 mt-1">{desc}</p>
@@ -69,14 +69,14 @@ export default function ProgramSection() {
       whileInView={{ opacity: 1, scale: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 1 }}
-      className="relative  max-w-xl mx-auto">
+      className="relative max-w-md mx-auto">
         <ResponsiveContainer
           carouselRef={carouselRef}
           render={(width, carouselRef) => (
             <StackedCarousel
               ref={carouselRef}
               slideComponent={ProgramCard}
-              slideWidth={270}
+              slideWidth={250}
               carouselWidth={width}
               data={programs}
               currentVisibleSlide={3}
@@ -87,11 +87,7 @@ export default function ProgramSection() {
         />
       </motion.div>
         <Wave
-        className="w-full z-20"
-        fill="#ffff"
-        />
-        <Wave
-        className="absolute w-full z-20 "
+        className="absolute bottom-0 w-full h-20! z-20 "
         fill="var(--semi-background)"
         />
     </section>
